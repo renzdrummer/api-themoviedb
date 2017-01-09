@@ -46,8 +46,10 @@ public class MovieBasic extends MediaBasic implements Serializable {
     private String title;
     @JsonProperty("video")
     private Boolean video = null;
-    @JsonProperty("rating")
+    @JsonProperty("vote_average")
     private float userRating = -1f;
+    @JsonProperty("vote_count")
+    private int userRatingCount;
     @JsonProperty("genre_ids")
     private List<Integer> genreIds;
     @JsonProperty("original_language")
@@ -115,6 +117,14 @@ public class MovieBasic extends MediaBasic implements Serializable {
 
     public void setUserRating(float userRating) {
         this.userRating = userRating;
+    }
+
+    public int getUserRatingCount() {
+      return userRatingCount;
+    }
+
+    public void setUserRatingCount(int userRatingCount) {
+      this.userRatingCount = userRatingCount;
     }
 
     public List<Integer> getGenreIds() {

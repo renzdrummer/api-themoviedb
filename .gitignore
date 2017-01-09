@@ -13,3 +13,4 @@ testing.properties
 .project
 .DS_Store
 /nbproject/
+bin/
